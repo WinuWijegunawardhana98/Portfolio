@@ -60,14 +60,48 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects">
-      {/* <h2>Projects</h2> */}
-      <div className="projects-container">
+    <section 
+      id="projects" 
+      style={{
+        padding: '60px 20px',
+        backgroundColor: '#2c003e',  
+        color: '#e6e6e6', 
+      }}
+    >
+      <div className="projects-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+          <div 
+            key={index} 
+            className="project-card" 
+            style={{
+              backgroundColor: "#0f0f1a",  
+              borderRadius: '10px', 
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
+              padding: '20px',
+              margin: '15px',
+              width: '300px',
+              textAlign: 'center',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              cursor: 'pointer',
+            }}
+          >
+            <h3 style={{ fontSize: '1.5rem', color: '#b3a3d7' }}>{project.name}</h3> 
+            <p style={{ fontSize: '1rem', color: '#d1d1d1' }}>{project.description}</p> 
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{
+                color: '#00bcd4', 
+                fontWeight: 'bold', 
+                fontSize: '1.1rem', 
+                textDecoration: 'none', 
+                marginTop: '10px', 
+                display: 'inline-block'
+              }}
+            >
+              View Project
+            </a>
           </div>
         ))}
       </div>

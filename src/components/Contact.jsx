@@ -5,14 +5,15 @@ const Contact = () => {
     <section 
       id="contact" 
       style={{ 
-        padding: '50px 20px', 
+        padding: '60px 20px', 
         textAlign: 'center', 
-        backgroundColor: '#f4f4f4',
-        borderTop: '4px solid #00bcd4' 
+        backgroundColor: '#2c003e',  // Dark purple background
+        color: '#e6e6e6',  // Light text color for contrast
+        borderTop: '4px solid #00bcd4'  // Accent color for top border
       }}
     >
-      <h2 style={{ color: '#333', fontSize: '2rem', marginBottom: '20px' }}>Contact Me</h2>
-      <p style={{ color: '#555', fontSize: '1.1rem', marginBottom: '40px' }}>
+      <h2 style={{ color: '#b3a3d7', fontSize: '2rem', marginBottom: '20px' }}>Contact Me</h2>
+      <p style={{ color: '#d1d1d1', fontSize: '1.1rem', marginBottom: '40px' }}>
         Feel free to reach out for collaborations, inquiries, or just to say hi!
       </p>
 
@@ -40,7 +41,7 @@ const Contact = () => {
         </button>
       </form>
 
-      <h3 style={{ color: '#333', marginTop: '40px' }}>Connect with Me</h3>
+      <h3 style={{ color: '#b3a3d7', marginTop: '40px' }}>Connect with Me</h3>
       <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '20px' }}>
         <a 
           href="https://github.com/WinuWijegunawardhana98" 
@@ -79,7 +80,7 @@ const buttonStyle = {
   width: '80%',
   padding: '12px',
   marginTop: '20px',
-  backgroundColor: '#00bcd4',
+  backgroundColor: "#0f0f1a",  // Accent color for the button
   color: '#fff',
   border: 'none',
   borderRadius: '5px',
@@ -90,7 +91,7 @@ const buttonStyle = {
 
 const linkStyle = {
   fontSize: '1.2rem',
-  color: '#0077b5',
+  color: '#00bcd4',  // Accent color for the links
   textDecoration: 'none',
   fontWeight: 'bold',
   transition: 'color 0.3s',

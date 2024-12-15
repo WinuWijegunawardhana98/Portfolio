@@ -1,60 +1,118 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const headerStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    background: "#0f0f1a",
+    padding: "1rem 2rem",
+    color: "#ffffff",
+  };
+
+  const logoStyle = {
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    textShadow: "0 0 10px #00ffff",
+  };
+
+  const navStyle = {
+    listStyle: "none",
+    display: "flex",
+    gap: "1.5rem",
+  };
+
+  const linkStyle = {
+    color: "#00ffff",
+    textDecoration: "none",
+    transition: "color 0.3s ease, textShadow 0.3s ease",
+  };
+
+  const hoverStyle = {
+    color: "#ff00ff",
+    textShadow: "0 0 10px #ff00ff, 0 0 20px #ff00ff",
+  };
+
   return (
     <header style={headerStyle}>
-      <h1>Winodya Wijegunawardhana</h1>
+      <div style={logoStyle}>Winodya Wijegunawardhana</div>
       <nav>
         <ul style={navStyle}>
-          <li><Link to="/" style={linkStyle}>About</Link></li>
-          <li><Link to="/projects" style={linkStyle}>Projects</Link></li>
-          <li><Link to="/contact" style={linkStyle}>Contact</Link></li>
-          <li><Link to="/resume" style={linkStyle}>Resume</Link></li> {/* Resume link */}
+          <li>
+            <Link
+              to="/"
+              style={linkStyle}
+              onMouseOver={(e) =>
+                Object.assign(e.target.style, hoverStyle)
+              }
+              onMouseOut={(e) =>
+                Object.assign(e.target.style, linkStyle)
+              }
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              style={linkStyle}
+              onMouseOver={(e) =>
+                Object.assign(e.target.style, hoverStyle)
+              }
+              onMouseOut={(e) =>
+                Object.assign(e.target.style, linkStyle)
+              }
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/projects"
+              style={linkStyle}
+              onMouseOver={(e) =>
+                Object.assign(e.target.style, hoverStyle)
+              }
+              onMouseOut={(e) =>
+                Object.assign(e.target.style, linkStyle)
+              }
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/resume"
+              style={linkStyle}
+              onMouseOver={(e) =>
+                Object.assign(e.target.style, hoverStyle)
+              }
+              onMouseOut={(e) =>
+                Object.assign(e.target.style, linkStyle)
+              }
+            >
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              style={linkStyle}
+              onMouseOver={(e) =>
+                Object.assign(e.target.style, hoverStyle)
+              }
+              onMouseOut={(e) =>
+                Object.assign(e.target.style, linkStyle)
+              }
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
   );
-};
-
-
-// Inline styles for simplicity, or you can use an external CSS file
-const headerStyle = {
-  backgroundColor: '#2C3E50', // Dark blue shade for the header
-  color: '#fff',
-  padding: '20px 0', // Padding for spacing
-  textAlign: 'center',
-  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', // Shadow for a subtle 3D effect
-};
-
-const titleStyle = {
-  fontSize: '2.5rem',
-  fontWeight: 'bold',
-  letterSpacing: '2px',
-  marginBottom: '15px',
-};
-
-const navStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  listStyleType: 'none',
-  padding: 0,
-  margin: 0,
-};
-
-const linkStyle = {
-  textDecoration: 'none',
-  color: '#fff',
-  padding: '12px 20px', // More padding for bigger click areas
-  fontSize: '1.2rem',
-  margin: '0 15px',
-  fontWeight: '500', // Semi-bold font for emphasis
-  transition: 'color 0.3s, transform 0.3s', // Smooth transition for color and transform effects
-};
-
-const linkHoverStyle = {
-  color: '#00bcd4', // Highlight color for hover effect
-  transform: 'scale(1.1)', // Slightly enlarges the link on hover
 };
 
 export default Header;
