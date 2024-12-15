@@ -1,7 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { HashRouter } from "react-router-dom"; // Import HashRouter
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+ReactDOM.render(
+  <HashRouter basename="/Portfolio"> {/* If your app is deployed under /Portfolio */}
+    <App />
+  </HashRouter>,
+  document.getElementById("root")
+);
