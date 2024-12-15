@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 ReactDOM.render(
-  <HashRouter basename="/Portfolio"> {/* If your app is deployed under /Portfolio */}
+  <HashRouter basename="/Portfolio"> 
     <App />
   </HashRouter>,
   document.getElementById("root")
