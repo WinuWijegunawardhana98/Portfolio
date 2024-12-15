@@ -1,5 +1,6 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa"; 
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa"; // Importing icons from react-icons
+import myImage from "../assets/my.jpg"; // Import the image from the assets folder
 
 const Home = () => {
   const sectionStyle = {
@@ -24,7 +25,7 @@ const Home = () => {
   };
 
   const imageStyle = {
-    width: "150px", 
+    width: "150px", // Adjust the size of the image
     height: "150px",
     borderRadius: "50%",
     marginBottom: "20px",
@@ -45,8 +46,8 @@ const Home = () => {
 
   // Links to your social media
   const socialLinks = {
-    github: "https://github.com/WinuWijegunawardhana98",
-    linkedin: "https://www.linkedin.com/in/winodya-wijegunawardhana-a41998217/",
+    github: "https://github.com/yourusername",
+    linkedin: "https://linkedin.com/in/yourusername",
     facebook: "https://facebook.com/yourusername",
     instagram: "https://instagram.com/yourusername",
   };
@@ -55,11 +56,11 @@ const Home = () => {
     <section style={sectionStyle}>
       <div>
         <img
-          src="C:\Users\hp\my-portfolio\src\assets\my.jpg" // Replace with your image URL
-          alt=""
+          src={myImage} // Use the imported image
+          alt="Your Name"
           style={imageStyle}
         />
-        <h1 style={neonTextStyle}>Winodya Wijegunawardhana</h1> 
+        <h1 style={neonTextStyle}>Winodya Wijegunawardhana</h1> {/* Your name */}
         <p style={paragraphStyle}>
           Your next-level web developer and creative solution provider.
         </p>
